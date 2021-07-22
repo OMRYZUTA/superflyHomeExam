@@ -22,15 +22,12 @@ def get_angle(hour_hand_value, minute_hand_value):
     # the minutes hand also moves the hour hand
     fixed_hour_value = get_fixed_hour_hand_value(
         hour_hand_value, minute_hand_value/MINUTE_HAND_OFFSET)
-    angle = abs(
-        fixed_hour_value-minute_hand_value)
+    angle = abs(fixed_hour_value-minute_hand_value)
     if angle > 180:
         angle = abs(
             fixed_hour_value-minute_hand_value) % OBTUSE_ANGLE_OFFSET
 
-    # the substruction is for obtuse angles
-    if angle > SHARP_ANGLE_OFFSET:
-        angle = abs(angle) - SHARP_ANGLE_OFFSET
+    
 
     return angle
 

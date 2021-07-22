@@ -27,6 +27,7 @@ class Test(unittest.TestCase):
     def test_solution(self):
         self.assertEqual(solution("09:00"), 90)
         self.assertEqual(solution("13:17"), 63.5)
+        self.assertEqual(solution("18:00"),180)
 
 
 if __name__ == '__main__':
